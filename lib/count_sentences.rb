@@ -18,6 +18,6 @@ class String
   end
 
   def count_sentences
-
+    self.split(' ').count { |word| word.sentence? || word.question? || word.exclamation? }
   end
 end
